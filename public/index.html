@@ -1,24 +1,171 @@
 <!DOCTYPE html>
 <html>
   <head>
+  	<meta charset="utf-8">    
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CSS/HTML Workshop with govirtuo.com</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <style>
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.outlined {
+  border: 4px solid green;
+  outline: none;
+}
+
+	</style>
+
   </head>
+
   <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script src="virtuo.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+
+  				<figure class="image center">
+					<img src="img/virtuo.png">
+				</figure> 
+  		
+  	<!-- presentation section  -->
+  <section class="section has-background-light">
+			<div class="container">
+		
+					<div class="column">
+						<div class="notification is-primary">
+							<h1 class="title has-text-black is-size-4 center">Who is Virtuo ?</h1>
+							<p class="is-size-5">
+								Virtuo is a French start-up that digitizes the car rental industry across Europe via a Web Application.
+							</p>
+						</div>
+					</div>
+					<div class="column">
+						<div class="notification is-info">
+							<h1 class="title has-text-black is-size-4 center">The purpose of this page</h1>
+							<p class="is-size-5">
+								In this page, you can compute the debit and credit price of each rental actors and simulate your rental.
+							</p>
+						</div>
+					</div>
+				
+			</div>
+		</section>
+
+		<!-- form section -->
+		<section class="section has-background-grey">
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+						<div class="notification">
+							<h1 class="subtitle center">The car infos</h1>
+
+							<div id="car">
+								<div class="field">
+  									<label class="label">Car name</label>
+  									<div class="control">
+    									<input class="js-name input" type="text" placeholder="name">
+  									</div>
+								</div>
+
+								<div class="field">
+  									<label class="label">Price by day</label>
+  									<div class="control">
+    									<input class="js-price-by-day input" type="number" placeholder="price by day">
+  									</div>
+								</div>
+
+								<div class="field">
+  									<label class="label">Price by km</label>
+  									<div class="control">
+    									<input class="js-price-by-km input" type="number" placeholder="price by km">
+  									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="notification">
+							<h1 class="subtitle center">The driver infos</h1>
+
+							<div id="rental">
+
+								<div class="field">
+  									<label class="label">Driver name</label>
+  									<div class="control">
+    									<input class="js-name input" type="text" placeholder="name">
+  									</div>
+								</div>
+
+								<div class="field">
+  									<label class="label">Rental begin date</label>
+  									<div class="control">
+    									<input class="js-begin input" type="date" placeholder="begin">
+  									</div>
+								</div>
+
+								<div class="field">
+  									<label class="label">Rental end date</label>
+  									<div class="control">
+    									<input class="js-end input" type="date" placeholder="end">
+  									</div>
+								</div>
+
+								<div class="field">
+  									<label class="label">Distance in km</label>
+  									<div class="control">
+    									<input class="js-distance input" type="number" placeholder="distance">
+  									</div>
+								</div>
+
+
+								<div class="field">
+  									<div class="control">
+  										<label class="label">Deductible option</label>
+    									<label class="radio">
+     										<input class="js-option" placeholder="Deductible option"type="radio" name="question">
+     											Yes
+    									</label>
+    									<label class="radio">
+     										 <input type="radio" name="question">
+      											No
+    									</label>
+ 									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="center">
+						<button class="button is-danger" id="compute">Compute</button>
+					</div>
+				</div>
+				<div class="column">
+					<div class="notification is-danger">
+						<h1 class = "title center">Price :</h1>
+						<p class= "is-size-5 center" id="actors">
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="hero has-background-light">
+  		<div class="hero-body">
+  			<div class="container">
+  				<figure class="image center">
+					<img src="img/virtuo-logo.png" style="max-width: 255px;">
+				</figure> 
+  		</div>
+  	</section>
+
+		<script src="virtuo.js"></script>
+   		<script src="index.js"></script>
+  	</body> 
+
 </html>
